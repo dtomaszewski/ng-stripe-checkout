@@ -1,6 +1,6 @@
 {
   "name": "ng9-stripe-checkout",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Implements Stripe Checkout as an Angular module.",
   "main": "./dist/ng9-stripe-checkout.ts",
   "scripts": {
@@ -8,7 +8,7 @@
     "transpile": "./node_modules/.bin/ngc",
     "package": "rollup -c",
     "minify": "uglifyjs dist/bundles/ng9-stripe-checkout.umd.js --screw-ie8 --compress --mangle --comments --output dist/bundles/ng9-stripe-checkout.umd.min.js",
-    "build": "npm run transpile && npm run package && npm run minify && npm run copyfiles",
+    "build": "npm run transpile && npm run package && npm run copyfiles",
     "copyfiles": "copyfiles README.md LICENSE package.json dist/"
   },
   "repository": {
@@ -28,19 +28,20 @@
   },
   "homepage": "https://github.com/westphalen/ng9-stripe-checkout#readme",
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.13.0",
-    "@angular/compiler": "^7.2.16",
-    "@angular/compiler-cli": "^7.2.16",
-    "@angular/core": "^7.2.16",
+    "@angular-devkit/build-angular": "~0.803.25",
+    "@angular/compiler": "^8.2.14",
+    "@angular/compiler-cli": "^8.2.14",
+    "@angular/core": "^8.2.14",
+    "codelyzer": "^5.0.1",
     "copyfiles": "^1.2.0",
     "rollup": "^0.49.3",
     "rxjs": "^6.5.4",
-    "typescript": "^3.2.4",
-    "uglify-js": "^3.1.0",
-    "zone.js": "^0.8.29"
+    "typescript": "3.5.3",
+    "uglify-js": "^3.8.0",
+    "zone.js": "~0.9.1"
   },
   "dependencies": {
-    "@angular/cli": "^7.3.9",
+    "@angular/cli": "^8.3.25",
     "rxjs-compat": "^6.0.0-rc.0",
     "tslib": "^1.9.0"
   }

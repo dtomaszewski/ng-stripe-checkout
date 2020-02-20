@@ -1,12 +1,9 @@
-import {
-  IStripeCheckoutConfig,
-  IStripeCheckoutOptions,
-  IStripeCheckoutToken
-} from "./config.model";
+import { IStripeCheckoutConfig, IStripeCheckoutOptions, IStripeCheckoutToken, } from './config.model';
 
 declare let StripeCheckout: any;
 
 export class StripeCheckoutHandler {
+
   /**
    * Holds the Stripe Checkout instance.
    */
@@ -61,7 +58,7 @@ export class StripeCheckoutHandler {
         closedFn();
       }
 
-      this.rejectFn("stripe_closed");
+      this.rejectFn('stripe_closed');
     };
 
     const promise = new Promise<IStripeCheckoutToken>((resolve, reject) => {
@@ -80,4 +77,5 @@ export class StripeCheckoutHandler {
   public close(): void {
     this.stripeCheckout.close();
   }
+
 }
