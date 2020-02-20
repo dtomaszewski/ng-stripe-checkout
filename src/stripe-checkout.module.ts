@@ -1,9 +1,7 @@
-import { NgModule } from '@angular/core';
-import { StripeCheckoutLoader } from './loader';
+import { NgModule } from "@angular/core";
+import { StripeCheckoutLoader } from "./loader";
 
 @NgModule({
-  providers: [
-    StripeCheckoutLoader,
-  ],
+  providers: [StripeCheckoutLoader]
 })
 export class StripeCheckoutModule {}

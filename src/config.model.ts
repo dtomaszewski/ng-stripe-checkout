@@ -3,7 +3,10 @@ export interface IStripeCheckoutToken {
   email: string;
 }
 
-export type StripeCheckoutCompleteFn = (token: IStripeCheckoutToken, args?: any) => void;
+export type StripeCheckoutCompleteFn = (
+  token: IStripeCheckoutToken,
+  args?: any
+) => void;
 
 export type StripeCheckoutOpenCloseFn = () => void;
 

@@ -1,10 +1,9 @@
-import { Injectable } from '@angular/core';
-import { StripeCheckoutHandler } from './handler';
-import { IStripeCheckoutConfig } from './config.model';
+import { Injectable } from "@angular/core";
+import { StripeCheckoutHandler } from "./handler";
+import { IStripeCheckoutConfig } from "./config.model";
 
 @Injectable()
 export class StripeCheckoutLoader {
-
   private loaded: Promise<void>;
 
   /**
@@ -12,7 +11,9 @@ export class StripeCheckoutLoader {
    * @param {IStripeCheckoutConfig} config
    * @returns {Promise<StripeCheckoutHandler>}
    */
-  public createHandler(config: IStripeCheckoutConfig): Promise<StripeCheckoutHandler> {
+  public createHandler(
+    config: IStripeCheckoutConfig
+  ): Promise<StripeCheckoutHandler> {
     return this.load().then(() => {
       return new StripeCheckoutHandler(config);
     });
@@ -27,23 +28,28 @@ export class StripeCheckoutLoader {
       // No cached Promise exist, so we have to load checkout.js.
       this.loaded = new Promise<void>((resolve, reject) => {
         // Create script element.
-        let script: any = document.createElement('script');
-        script.type = 'text/javascript';
-        script.src = 'https://checkout.stripe.com/checkout.js';
+        let script: any = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = "https://checkout.stripe.com/checkout.js";
         script.onerror = (e: any) => reject(e);
-        if (script.readyState) {  // IE fallback.
+        if (script.readyState) {
+          // IE fallback.
           script.onreadystatechange = () => {
-            if (script.readyState === "loaded" || script.readyState === "complete") {
+            if (
+              script.readyState === "loaded" ||
+              script.readyState === "complete"
+            ) {
               script.onreadystatechange = null;
               resolve();
             }
           };
-        } else {  // Other browsers.
+        } else {
+          // Other browsers.
           script.onload = () => {
             resolve();
           };
         }
-        document.getElementsByTagName('body')[0].appendChild(script);
+        document.getElementsByTagName("body")[0].appendChild(script);
       });
     }
 
