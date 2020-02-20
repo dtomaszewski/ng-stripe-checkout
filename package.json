@@ -1,19 +1,19 @@
 {
-  "name": "ng-stripe-checkout",
+  "name": "ng9-stripe-checkout",
   "version": "1.0.4",
   "description": "Implements Stripe Checkout as an Angular module.",
-  "main": "./dist/ng-stripe-checkout.ts",
+  "main": "./dist/ng9-stripe-checkout.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "transpile": "./node_modules/.bin/ngc",
     "package": "rollup -c",
-    "minify": "uglifyjs dist/bundles/ng-stripe-checkout.umd.js --screw-ie8 --compress --mangle --comments --output dist/bundles/ng-stripe-checkout.umd.min.js",
+    "minify": "uglifyjs dist/bundles/ng9-stripe-checkout.umd.js --screw-ie8 --compress --mangle --comments --output dist/bundles/ng9-stripe-checkout.umd.min.js",
     "build": "npm run transpile && npm run package && npm run minify && npm run copyfiles",
     "copyfiles": "copyfiles README.md LICENSE package.json dist/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/westphalen/ng-stripe-checkout.git"
+    "url": "git+https://github.com/westphalen/ng9-stripe-checkout.git"
   },
   "keywords": [
     "angular",
@@ -24,9 +24,9 @@
   "author": "Sune Westphalen",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/westphalen/ng-stripe-checkout/issues"
+    "url": "https://github.com/westphalen/ng9-stripe-checkout/issues"
   },
-  "homepage": "https://github.com/westphalen/ng-stripe-checkout#readme",
+  "homepage": "https://github.com/westphalen/ng9-stripe-checkout#readme",
   "devDependencies": {
     "@angular/compiler": "^5.2.9",
     "@angular/compiler-cli": "^5.2.9",

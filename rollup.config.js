@@ -1,7 +1,7 @@
 export default {
   input: 'dist/index.js',
   output: {
-    file: 'dist/bundles/ng-stripe-checkout.umd.js',
+    file: 'dist/bundles/ng9-stripe-checkout.umd.js',
     format: 'umd'
   },
   sourceMap: false,

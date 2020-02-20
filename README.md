@@ -7,7 +7,7 @@ Angular 2+ component for Stripe's Checkout feature.
 You can install the package with the following command:
 
 ```shell
-npm install ng-stripe-checkout
+npm install ng9-stripe-checkout
 ```
 
 ## Usage
@@ -18,7 +18,7 @@ This is typically done in your `app.module.ts`:
 ```ts
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import {StripeCheckoutModule} from 'ng-stripe-checkout';
+import {StripeCheckoutModule} from 'ng9-stripe-checkout';
 
 @NgModule({
     imports: [
@@ -35,7 +35,7 @@ export class AppModule { }
 Wherever you need to utilize Stripe Checkout, inject the service `StripeCheckoutLoader` in your constructor.
 ```ts
 import {Component} from '@angular/core';
-import {StripeCheckoutLoader} from 'ng-stripe-checkout';
+import {StripeCheckoutLoader} from 'ng9-stripe-checkout';
 
 @Component({
     template: '<ion-nav [root]="rootPage"></ion-nav>'
@@ -52,7 +52,7 @@ The `createHandler` method takes the configuration options you know from the Str
 
 ```ts
 import {Component} from '@angular/core';
-import {StripeCheckoutLoader, StripeCheckoutHandler} from 'ng-stripe-checkout';
+import {StripeCheckoutLoader, StripeCheckoutHandler} from 'ng9-stripe-checkout';
 
 @Component({
     template: '<ion-nav [root]="rootPage"></ion-nav>'
@@ -84,7 +84,7 @@ Use this to set amount, user's email and other things that might change from eac
 After payment, the `token` callback will be triggered (see step 3 above).
 ```ts
 import {Component} from '@angular/core';
-import {StripeCheckoutLoader, StripeCheckoutHandler} from 'ng-stripe-checkout';
+import {StripeCheckoutLoader, StripeCheckoutHandler} from 'ng9-stripe-checkout';
 
 @Component({
     template: '<ion-nav [root]="rootPage"></ion-nav>'
