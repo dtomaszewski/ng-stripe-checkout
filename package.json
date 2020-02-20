@@ -1,6 +1,6 @@
 {
   "name": "ng9-stripe-checkout",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Implements Stripe Checkout as an Angular module.",
   "main": "./dist/ng9-stripe-checkout.ts",
   "scripts": {
