@@ -1,6 +1,6 @@
 {
   "name": "ng9-stripe-checkout",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Implements Stripe Checkout as an Angular module.",
   "main": "./dist/ng9-stripe-checkout.ts",
   "scripts": {
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/westphalen/ng9-stripe-checkout.git"
+    "url": "git+https://github.com/dtomaszewski/ng9-stripe-checkout.git"
   },
   "keywords": [
     "angular",
@@ -24,9 +24,9 @@
   "author": "Sune Westphalen",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/westphalen/ng9-stripe-checkout/issues"
+    "url": "https://github.com/dtomaszewski/ng9-stripe-checkout/issues"
   },
-  "homepage": "https://github.com/westphalen/ng9-stripe-checkout#readme",
+  "homepage": "https://github.com/dtomaszewski/ng9-stripe-checkout#readme",
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.900.3",
     "@angular/compiler": "^9.0.2",
